@@ -7,11 +7,24 @@
 
 import SwiftUI
 
-var posts = [
-    User(accountName: "hekk"),
-    User(accountName: "maria"),
+var users = [
     User(accountName: "solan"),
+    User(accountName: "maria"),
+    User(accountName: "lynda"),
+    User(accountName: "kelly"),
+    User(accountName: "hekk"),
+    User(accountName: "john"),
 ]
+
+var posts = [
+    PostData(user: users[0]),
+    PostData(user: users[2]),
+    PostData(user: users[3]),
+]
+
+var stories = users.map {
+    Story(user: $0)
+}
 
 struct ContentView: View {
     var body: some View {
@@ -19,23 +32,18 @@ struct ContentView: View {
             VStack(alignment: .center, spacing: 0) {
                 ScrollView(.horizontal) {
                     HStack(alignment: .center, spacing: 10) {
-                        CircleAvatar(accountName: "solan")
-                        CircleAvatar(accountName: "maria")
-                        CircleAvatar(accountName: "lynda")
-                        CircleAvatar(accountName: "kelly")
-                        CircleAvatar(accountName: "hekk")
-                        CircleAvatar(isFinished: true, accountName: "john")
-                    }.padding(.horizontal)
+                        ForEach(stories) {
+                            CircleAvatar(accountName: $0.user.accountName)
+                        }
+                    }
+                    .padding(.horizontal)
                 }
                 Divider()
                 LazyVStack {
                     ForEach(posts) {
-                        Post(accountName: $0.accountName)
+                        Post(data: $0)
                     }
                 }
-                Spacer()
-                Text("Hello, world!")
-                    .padding()
             }
         }
     }
@@ -45,9 +53,4 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
-}
-
-struct User: Identifiable {
-    let id = UUID()
-    let accountName: String
 }

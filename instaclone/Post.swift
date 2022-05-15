@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct Post: View {
-    var accountName: String
+    var data: PostData
 
     var body: some View {
         VStack(spacing: 0) {
             HStack(spacing: 10) {
-                CircleAvatar(showAccountName: false, accountName: accountName, size: 30)
-                Text(accountName)
+                CircleAvatar(showAccountName: false, accountName: data.user.accountName, size: 30)
+                Text(data.user.accountName)
                     .font(.subheadline)
                     .bold()
                 Spacer()
@@ -22,9 +22,9 @@ struct Post: View {
                     .imageScale(.large)
             }
             .padding(.horizontal, 8)
-            Image("story")
-                .resizable()
+            AsyncImage(url: URL(string: data.url))
                 .frame(height: 300)
+
             HStack(spacing: 8) {
                 Image(systemName: "heart")
                     .imageScale(.large)
@@ -43,6 +43,6 @@ struct Post: View {
 
 struct Post_Previews: PreviewProvider {
     static var previews: some View {
-        Post(accountName: "hekk")
+        Post(data: PostData(user: User(accountName: "hekk")))
     }
 }
