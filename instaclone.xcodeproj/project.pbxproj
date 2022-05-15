@@ -11,6 +11,8 @@
 		C38A2C862831748100FAF410 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A2C852831748100FAF410 /* ContentView.swift */; };
 		C38A2C882831748100FAF410 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C38A2C872831748100FAF410 /* Assets.xcassets */; };
 		C38A2C8B2831748100FAF410 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C38A2C8A2831748100FAF410 /* Preview Assets.xcassets */; };
+		C38A2C922831793100FAF410 /* CircleAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A2C912831793100FAF410 /* CircleAvatar.swift */; };
+		C38A2C94283181CC00FAF410 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A2C93283181CC00FAF410 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		C38A2C852831748100FAF410 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C38A2C872831748100FAF410 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C38A2C8A2831748100FAF410 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C38A2C912831793100FAF410 /* CircleAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleAvatar.swift; sourceTree = "<group>"; };
+		C38A2C93283181CC00FAF410 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +55,12 @@
 		C38A2C822831748100FAF410 /* instaclone */ = {
 			isa = PBXGroup;
 			children = (
+				C38A2C912831793100FAF410 /* CircleAvatar.swift */,
 				C38A2C832831748100FAF410 /* instacloneApp.swift */,
 				C38A2C852831748100FAF410 /* ContentView.swift */,
 				C38A2C872831748100FAF410 /* Assets.xcassets */,
 				C38A2C892831748100FAF410 /* Preview Content */,
+				C38A2C93283181CC00FAF410 /* Post.swift */,
 			);
 			path = instaclone;
 			sourceTree = "<group>";
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C38A2C922831793100FAF410 /* CircleAvatar.swift in Sources */,
 				C38A2C862831748100FAF410 /* ContentView.swift in Sources */,
 				C38A2C842831748100FAF410 /* instacloneApp.swift in Sources */,
+				C38A2C94283181CC00FAF410 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
