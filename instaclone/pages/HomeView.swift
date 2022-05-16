@@ -1,8 +1,8 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  instaclone
 //
-//  Created by Simon Jespersen on 15/05/2022.
+//  Created by Simon Jespersen on 16/05/2022.
 //
 
 import SwiftUI
@@ -26,7 +26,7 @@ var stories = users.map {
     Story(user: $0)
 }
 
-struct ContentView: View {
+struct HomeView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .center, spacing: 0) {
@@ -35,8 +35,7 @@ struct ContentView: View {
                         ForEach(stories) {
                             CircleAvatar(accountName: $0.user.accountName)
                         }
-                    }
-                    .padding(.horizontal)
+                    }.padding(.horizontal, 8)
                 }
                 Divider()
                 LazyVStack {
@@ -45,12 +44,12 @@ struct ContentView: View {
                     }
                 }
             }
-        }
+        }.ignoresSafeArea()
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeView()
     }
 }
