@@ -3,7 +3,7 @@
 //  instaclone
 //
 //  Created by Simon Jespersen on 16/05/2022.
-//
+// https://www.appcoda.com/swiftui-search-bar/
 
 import SwiftUI
  
@@ -26,10 +26,11 @@ struct SearchBar: View {
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .padding(.leading, 8)
                  
-                        if isEditing {
-                            Button(action: {
+                        if isEditing && !text.isEmpty {
+                            Button {
                                 self.text = ""
-                            }) {
+                                
+                            } label: {
                                 Image(systemName: "multiply.circle.fill")
                                     .foregroundColor(.gray)
                                     .padding(.trailing, 8)
@@ -41,19 +42,12 @@ struct SearchBar: View {
                 .onTapGesture {
                     self.isEditing = true
                 }
- 
-            if isEditing {
-                Button(action: {
-                    self.isEditing = false
-                    self.text = ""
- 
-                }) {
-                    Text("Cancel")
-                }
-                .padding(.trailing, 10)
-                .transition(.move(edge: .trailing))
-                .animation(.default)
-            }
         }
+    }
+}
+
+struct Previews_SearchBar_Previews: PreviewProvider {
+    static var previews: some View {
+        SearchBar(text: .constant(""))
     }
 }
