@@ -28,23 +28,33 @@ var stories = users.map {
 
 struct HomeView: View {
     var body: some View {
-        ScrollView {
-            VStack(alignment: .center, spacing: 0) {
-                ScrollView(.horizontal) {
-                    HStack(alignment: .center, spacing: 10) {
-                        ForEach(stories) {
-                            CircleAvatar(accountName: $0.user.accountName)
+        VStack(spacing: 0) {
+            HStack {
+                Text("ITBeginstagram")
+                    .font(.title)
+                Spacer()
+                Image(systemName: "plus.app")
+                Image(systemName: "heart")
+                Image(systemName: "paperplane")
+            }.padding(.horizontal, 8)
+            ScrollView {
+                VStack(alignment: .center, spacing: 0) {
+                    ScrollView(.horizontal) {
+                        HStack(alignment: .center, spacing: 10) {
+                            ForEach(stories) {
+                                CircleAvatar(accountName: $0.user.accountName)
+                            }
+                        }.padding(.horizontal, 8)
+                    }
+                    Divider()
+                    LazyVStack {
+                        ForEach(posts) {
+                            Post(data: $0)
                         }
-                    }.padding(.horizontal, 8)
-                }
-                Divider()
-                LazyVStack {
-                    ForEach(posts) {
-                        Post(data: $0)
                     }
                 }
-            }
-        }.ignoresSafeArea()
+            }.ignoresSafeArea()
+        }
     }
 }
 

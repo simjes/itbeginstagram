@@ -18,15 +18,15 @@ struct LandingView: View {
                 .tabItem {
                     Label("", systemImage: "magnifyingglass")
                 }
-            HomeView()
+            ReelsView()
                 .tabItem {
                     Label("", systemImage: "play.square")
                 }
-            HomeView()
+            ShopView()
                 .tabItem {
                     Label("", systemImage: "bag")
                 }
-            HomeView()
+            ProfileView()
                 .tabItem {
                     Label("", systemImage: "person.crop.circle")
                 }

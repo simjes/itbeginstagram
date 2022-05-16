@@ -16,6 +16,11 @@
 		C38A2C9828318E5500FAF410 /* structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A2C9728318E5500FAF410 /* structs.swift */; };
 		C38A2C9A2832DE6200FAF410 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A2C992832DE6200FAF410 /* HomeView.swift */; };
 		C38A2C9E2832E0F800FAF410 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A2C9D2832E0F800FAF410 /* LandingView.swift */; };
+		C38A2CA12832EB7E00FAF410 /* HideableTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A2CA02832EB7E00FAF410 /* HideableTopView.swift */; };
+		C38A2CA32832ECAE00FAF410 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A2CA22832ECAE00FAF410 /* SearchBar.swift */; };
+		C38A2CA52832EDA200FAF410 /* ReelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A2CA42832EDA200FAF410 /* ReelsView.swift */; };
+		C38A2CA72832EDCC00FAF410 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A2CA62832EDCC00FAF410 /* ShopView.swift */; };
+		C38A2CA92832EDEA00FAF410 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A2CA82832EDEA00FAF410 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,11 @@
 		C38A2C9728318E5500FAF410 /* structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = structs.swift; sourceTree = "<group>"; };
 		C38A2C992832DE6200FAF410 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C38A2C9D2832E0F800FAF410 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
+		C38A2CA02832EB7E00FAF410 /* HideableTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideableTopView.swift; sourceTree = "<group>"; };
+		C38A2CA22832ECAE00FAF410 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		C38A2CA42832EDA200FAF410 /* ReelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsView.swift; sourceTree = "<group>"; };
+		C38A2CA62832EDCC00FAF410 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
+		C38A2CA82832EDEA00FAF410 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +71,7 @@
 		C38A2C822831748100FAF410 /* instaclone */ = {
 			isa = PBXGroup;
 			children = (
+				C38A2C9F2832EB6D00FAF410 /* Borrowed */,
 				C38A2C9C2832E01D00FAF410 /* features */,
 				C38A2C9B2832E00800FAF410 /* pages */,
 				C38A2C832831748100FAF410 /* instacloneApp.swift */,
@@ -85,6 +96,9 @@
 			children = (
 				C38A2C852831748100FAF410 /* SearchView.swift */,
 				C38A2C992832DE6200FAF410 /* HomeView.swift */,
+				C38A2CA42832EDA200FAF410 /* ReelsView.swift */,
+				C38A2CA62832EDCC00FAF410 /* ShopView.swift */,
+				C38A2CA82832EDEA00FAF410 /* ProfileView.swift */,
 			);
 			path = pages;
 			sourceTree = "<group>";
@@ -96,6 +110,15 @@
 				C38A2C912831793100FAF410 /* CircleAvatar.swift */,
 			);
 			path = features;
+			sourceTree = "<group>";
+		};
+		C38A2C9F2832EB6D00FAF410 /* Borrowed */ = {
+			isa = PBXGroup;
+			children = (
+				C38A2CA02832EB7E00FAF410 /* HideableTopView.swift */,
+				C38A2CA22832ECAE00FAF410 /* SearchBar.swift */,
+			);
+			path = Borrowed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,8 +195,13 @@
 				C38A2C862831748100FAF410 /* SearchView.swift in Sources */,
 				C38A2C842831748100FAF410 /* instacloneApp.swift in Sources */,
 				C38A2C9A2832DE6200FAF410 /* HomeView.swift in Sources */,
+				C38A2CA92832EDEA00FAF410 /* ProfileView.swift in Sources */,
+				C38A2CA12832EB7E00FAF410 /* HideableTopView.swift in Sources */,
+				C38A2CA32832ECAE00FAF410 /* SearchBar.swift in Sources */,
+				C38A2CA52832EDA200FAF410 /* ReelsView.swift in Sources */,
 				C38A2C9E2832E0F800FAF410 /* LandingView.swift in Sources */,
 				C38A2C94283181CC00FAF410 /* Post.swift in Sources */,
+				C38A2CA72832EDCC00FAF410 /* ShopView.swift in Sources */,
 				C38A2C9828318E5500FAF410 /* structs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
