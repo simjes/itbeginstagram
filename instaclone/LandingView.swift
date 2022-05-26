@@ -31,11 +31,16 @@ struct LandingView: View {
                     Label("", systemImage: "person.crop.circle")
                 }
         }
+        .overlay(StoryOverlay())
     }
 }
 
 struct LandingView_Previews: PreviewProvider {
     static var previews: some View {
-        LandingView()
+        LandingView().environmentObject({ () -> StoryState in
+            let envObj = StoryState()
+            envObj.showStory = false
+            return envObj
+        }())
     }
 }

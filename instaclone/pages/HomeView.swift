@@ -27,6 +27,8 @@ var stories = users.map {
 }
 
 struct HomeView: View {
+    @StateObject var storyState = StoryState()
+
     var body: some View {
         VStack(spacing: 0) {
             HStack {
@@ -53,13 +55,18 @@ struct HomeView: View {
                         }
                     }
                 }
-            }.ignoresSafeArea()
+            }
+            .ignoresSafeArea()
         }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView().environmentObject({ () -> StoryState in
+            let envObj = StoryState()
+            envObj.showStory = false
+            return envObj
+        }())
     }
 }

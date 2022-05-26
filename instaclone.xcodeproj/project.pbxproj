@@ -21,6 +21,8 @@
 		C38A2CA52832EDA200FAF410 /* ReelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A2CA42832EDA200FAF410 /* ReelsView.swift */; };
 		C38A2CA72832EDCC00FAF410 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A2CA62832EDCC00FAF410 /* ShopView.swift */; };
 		C38A2CA92832EDEA00FAF410 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A2CA82832EDEA00FAF410 /* ProfileView.swift */; };
+		C38A2CAB283FF3E200FAF410 /* StoryOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A2CAA283FF3E200FAF410 /* StoryOverlay.swift */; };
+		C38A2CAD283FF66200FAF410 /* StoryState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A2CAC283FF66200FAF410 /* StoryState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		C38A2CA42832EDA200FAF410 /* ReelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsView.swift; sourceTree = "<group>"; };
 		C38A2CA62832EDCC00FAF410 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
 		C38A2CA82832EDEA00FAF410 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		C38A2CAA283FF3E200FAF410 /* StoryOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryOverlay.swift; sourceTree = "<group>"; };
+		C38A2CAC283FF66200FAF410 /* StoryState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +110,10 @@
 		C38A2C9C2832E01D00FAF410 /* features */ = {
 			isa = PBXGroup;
 			children = (
+				C38A2CAA283FF3E200FAF410 /* StoryOverlay.swift */,
 				C38A2C93283181CC00FAF410 /* Post.swift */,
 				C38A2C912831793100FAF410 /* CircleAvatar.swift */,
+				C38A2CAC283FF66200FAF410 /* StoryState.swift */,
 			);
 			path = features;
 			sourceTree = "<group>";
@@ -196,10 +202,12 @@
 				C38A2C842831748100FAF410 /* instacloneApp.swift in Sources */,
 				C38A2C9A2832DE6200FAF410 /* HomeView.swift in Sources */,
 				C38A2CA92832EDEA00FAF410 /* ProfileView.swift in Sources */,
+				C38A2CAD283FF66200FAF410 /* StoryState.swift in Sources */,
 				C38A2CA12832EB7E00FAF410 /* HideableTopView.swift in Sources */,
 				C38A2CA32832ECAE00FAF410 /* SearchBar.swift in Sources */,
 				C38A2CA52832EDA200FAF410 /* ReelsView.swift in Sources */,
 				C38A2C9E2832E0F800FAF410 /* LandingView.swift in Sources */,
+				C38A2CAB283FF3E200FAF410 /* StoryOverlay.swift in Sources */,
 				C38A2C94283181CC00FAF410 /* Post.swift in Sources */,
 				C38A2CA72832EDCC00FAF410 /* ShopView.swift in Sources */,
 				C38A2C9828318E5500FAF410 /* structs.swift in Sources */,

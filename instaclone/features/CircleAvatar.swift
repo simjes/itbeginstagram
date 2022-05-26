@@ -12,6 +12,7 @@ struct CircleAvatar: View {
     var showAccountName: Bool = true
     var accountName: String
     var size: CGFloat? = 50
+    @EnvironmentObject var storyState: StoryState
 
     var body: some View {
         VStack {
@@ -29,16 +30,31 @@ struct CircleAvatar: View {
             }
         }
         .padding(.vertical)
+        .onTapGesture {
+            storyState.showStory = true
+        }
     }
 }
 
 struct StoryCircle_Previews: PreviewProvider {
     static var previews: some View {
         HStack {
-            CircleAvatar(accountName: "jonas")
-            CircleAvatar(isFinished: true, accountName: "kaare")
+            CircleAvatar(accountName: "jonas").environmentObject({ () -> StoryState in
+                let envObj = StoryState()
+                envObj.showStory = false
+                return envObj
+            }())
+            CircleAvatar(isFinished: true, accountName: "kaare").environmentObject({ () -> StoryState in
+                let envObj = StoryState()
+                envObj.showStory = false
+                return envObj
+            }())
             CircleAvatar(isFinished: true,
-                         showAccountName: false, accountName: "kaare")
+                         showAccountName: false, accountName: "kaare").environmentObject({ () -> StoryState in
+                let envObj = StoryState()
+                envObj.showStory = false
+                return envObj
+            }())
         }
     }
 }

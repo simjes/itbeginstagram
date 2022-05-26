@@ -22,6 +22,7 @@ struct Post: View {
                     .imageScale(.large)
             }
             .padding(.horizontal, 8)
+
             AsyncImage(url: URL(string: data.url))
                 .frame(height: 300)
 
