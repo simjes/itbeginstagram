@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct LandingView: View {
+    @StateObject var storyState = StoryState()
+
     var body: some View {
         TabView {
             HomeView()
                 .tabItem {
                     Label("", systemImage: "house")
                 }
+                .environmentObject(storyState)
             SearchView()
                 .tabItem {
                     Label("", systemImage: "magnifyingglass")
@@ -31,7 +34,7 @@ struct LandingView: View {
                     Label("", systemImage: "person.crop.circle")
                 }
         }
-        .overlay(StoryOverlay())
+        .overlay(StoryOverlay().environmentObject(storyState))
     }
 }
 

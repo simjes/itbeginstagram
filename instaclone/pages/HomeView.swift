@@ -27,8 +27,6 @@ var stories = users.map {
 }
 
 struct HomeView: View {
-    @StateObject var storyState = StoryState()
-
     var body: some View {
         VStack(spacing: 0) {
             HStack {
