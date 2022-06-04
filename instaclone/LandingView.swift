@@ -34,6 +34,11 @@ struct LandingView: View {
                     Label("", systemImage: "person.crop.circle")
                 }
         }
+        .onAppear {
+            let tabBarAppearance = UITabBarAppearance()
+            tabBarAppearance.configureWithDefaultBackground()
+            UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+        }
         .overlay(StoryOverlay().environmentObject(storyState))
     }
 }

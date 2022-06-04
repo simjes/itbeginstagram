@@ -54,7 +54,6 @@ struct HomeView: View {
                     }
                 }
             }
-            .ignoresSafeArea()
         }
     }
 }
