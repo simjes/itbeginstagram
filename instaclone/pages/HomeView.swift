@@ -39,13 +39,7 @@ struct HomeView: View {
             }.padding(.horizontal, 8)
             ScrollView {
                 VStack(alignment: .center, spacing: 0) {
-                    ScrollView(.horizontal) {
-                        HStack(alignment: .center, spacing: 10) {
-                            ForEach(stories) {
-                                CircleAvatar(accountName: $0.user.accountName)
-                            }
-                        }.padding(.horizontal, 8)
-                    }
+                    StoryView()
                     Divider()
                     LazyVStack {
                         ForEach(posts) {
@@ -65,5 +59,17 @@ struct HomeView_Previews: PreviewProvider {
             envObj.showStory = false
             return envObj
         }())
+    }
+}
+
+struct StoryView: View {
+    var body: some View {
+        ScrollView(.horizontal) {
+            HStack(alignment: .center, spacing: 10) {
+                ForEach(stories) {
+                    CircleAvatar(accountName: $0.user.accountName)
+                }
+            }.padding(.horizontal, 8)
+        }
     }
 }
